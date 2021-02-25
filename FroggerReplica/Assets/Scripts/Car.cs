@@ -4,12 +4,12 @@ public class Car : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 1f;
-    public float minSpeed = 8f;
+    public float minSpeed = 4f;
     public float maxSpeed = 12f;
 
     void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
+        speed = Random.Range(minSpeed, maxSpeed) + CarSpeedChanger.speedChangeValue;
     }
 
     // Update is called once per frame
