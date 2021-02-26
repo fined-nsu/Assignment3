@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 672529247}
   - component: {fileID: 672529246}
   - component: {fileID: 672529245}
+  - component: {fileID: 672529248}
   m_Layer: 5
   m_Name: QuitGameBtn
   m_TagString: Untagged
@@ -458,7 +459,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 672529246}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 672529248}
+        m_TargetAssemblyTypeName: ExitScreenButtons, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &672529246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +510,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672529243}
   m_CullTransparentMesh: 0
+--- !u!114 &672529248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672529243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c4b97ceca9cfe4da7d872d8406fb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitButton: {fileID: 672529245}
+  mainMenuButton: {fileID: 1043870504}
 --- !u!1 &726000585
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +766,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thank you for playing!
+  m_Text: 'Game Over
+
+    Thank you for playing!'
 --- !u!222 &969187613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -760,6 +789,7 @@ GameObject:
   - component: {fileID: 1043870506}
   - component: {fileID: 1043870505}
   - component: {fileID: 1043870504}
+  - component: {fileID: 1043870507}
   m_Layer: 5
   m_Name: MainMenuBtn
   m_TagString: Untagged
@@ -829,7 +859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1043870505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1043870507}
+        m_TargetAssemblyTypeName: ExitScreenButtons, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1043870505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,6 +910,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043870502}
   m_CullTransparentMesh: 0
+--- !u!114 &1043870507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043870502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c4b97ceca9cfe4da7d872d8406fb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitButton: {fileID: 672529245}
+  mainMenuButton: {fileID: 1043870504}
 --- !u!1 &1413415041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1167,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1580060995}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: EnterGameScene
+        m_MethodName: RestartFromExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

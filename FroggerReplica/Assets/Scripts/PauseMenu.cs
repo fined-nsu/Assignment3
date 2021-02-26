@@ -5,6 +5,9 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Button continueButton;
+    public Button SoundOn;
+    public Button SoundOff;
+    public static bool soundToggleValue = true;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +36,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
+    public void DisableSound()
+    {
+        soundToggleValue = false;
+    }
 
+    public void EnableSound()
+    {
+        soundToggleValue = true;
+    }
 }

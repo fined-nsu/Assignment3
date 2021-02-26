@@ -10,4 +10,11 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void RestartFromExit()
+    {
+        Frog.playerLives = ChangeLives.livesAmount;
+        Score.CurrentScore = 0;
+        SceneManager.LoadScene(1);
+    }
 }

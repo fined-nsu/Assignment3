@@ -4,9 +4,23 @@ using UnityEngine.UI;
 public class ChangeLives : MonoBehaviour
 {
     public Dropdown livesDropdown;
+    public static int livesAmount;
+
+
+    private void Start()
+    {
+        Frog.playerLives = 3;
+        livesAmount = Frog.playerLives;
+    }
+
+
     public void SetLives()
     {
-        if (livesDropdown.value == 1)
+        if (livesDropdown.value == 0)
+        {
+            Frog.playerLives = 3;
+        }
+        else if (livesDropdown.value == 1)
         {
             Frog.playerLives = 1;
         }
@@ -22,9 +36,6 @@ public class ChangeLives : MonoBehaviour
         {
             Frog.playerLives = 5;
         }
-        else
-        {
-            Frog.playerLives = 3;
-        }
+        livesAmount = Frog.playerLives;
     }
 }
