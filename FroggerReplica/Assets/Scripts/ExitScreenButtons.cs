@@ -14,6 +14,8 @@ public class ExitScreenButtons : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Frog.playerLives = 0;
+        Score.CurrentScore = 0;
         SceneManager.LoadScene(0);
     }
 }
